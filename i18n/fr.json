@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact",
+    "downloadCV": "Télécharger CV"
+  },
+  "hero": {
+    "name": "Fares Ben Khalifa",
+    "title": "Ingénieur Logiciel & Développeur Cloud",
+    "subtitle": "Construire des applications scalables avec les technologies modernes",
+    "cta": "Télécharger CV",
+    "experience-years": "Années d'Expérience",
+    "projects-completed": "Projets Terminés",
+    "client-satisfaction": "Satisfaction Client"
+  },
+  "skills": {
+    "title": "Compétences et Technologies",
+    "description": "Expertise en développement web et mobile moderne",
+    "dragInfo": "Glissez pour explorer",
+    "mobile": "Mobile",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "language": "Langage",
+    "database": "Base de Données",
+    "orm": "ORM",
+    "cms": "CMS",
+    "ecommerce": "E-commerce",
+    "languages": "Langues",
+    "frameworks": "Frameworks",
+    "tools": "Outils",
+    "platforms": "Plateformes"
+  },
+  "experience": {
+    "title": "Expérience",
+    "description": "Mon parcours professionnel",
+    "viewMore": "Vous voulez voir plus de détails?",
+    "viewFullCV": "Voir le CV Complet",
+    "key-achievements": "Réalisations Clés"
+  },
+  "experiences": {
+    "1": {
+      "title": "Ingénieur Logiciel",
+      "company": "Bysur",
+      "period": "2025 - Présent",
+      "location": "À distance",
+      "description": "Développement et maintenance d’applications web et mobiles, contribution aux décisions d’architecture et livraison de solutions évolutives orientées utilisateur sur plusieurs projets.",
+      "achievements": [
+        "Développement et maintenance d’applications web et mobiles avec React, React Native et WordPress pour des cas d’usage métier et e-commerce",
+        "Contribution à l’architecture applicative et à la conception des fonctionnalités, améliorant les performances, l’accessibilité et la maintenabilité"
+      ]
+    },
+    "2": {
+      "title": "Ingénieur Logiciel Freelance",
+      "company": "Freelance",
+      "period": "2023 - Présent",
+      "location": "À distance",
+      "description": "Réalisation de solutions web et mobiles en freelance pour des projets microcosmes, en mettant l’accent sur des applications fiables, maintenables et alignées sur les besoins clients.",
+      "achievements": [
+        "Développement et maintenance d’applications mobiles avec React Native pour Android et iOS",
+        "Conception et intégration de services backend avec Laravel, incluant des API REST, l’authentification et la logique métier",
+        "Collaboration avec les clients pour traduire les besoins fonctionnels en solutions techniques livrées de bout en bout"
+      ]
+    },
+    "3": {
+      "title": "Développeur Web Junior",
+      "company": "Sofrecom Tunisie",
+      "period": "2022 - 2023",
+      "location": "Tunis, Tunisie",
+      "description": "Début de carrière axé sur la création de sites web responsives et l’apprentissage des technologies web modernes.",
+      "achievements": [
+        "Apprentissage et application des bonnes pratiques du développement web",
+        "Amélioration du score d’accessibilité d’un site de 60 à 95",
+        "Développement de thèmes WordPress personnalisés pour des clients"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Travaux sélectionnés et études de cas",
+    "viewDemo": "Voir la démo",
+    "viewCode": "Voir le code",
+    "featured-work": "Travail en vedette",
+    "featured": "En vedette",
+    "1": {
+      "title": "Assurnoo",
+      "description": "Application d’assurance multiplateforme pour web et mobile développée avec React Native, intégrant les API REST du client pour une gestion fluide des contrats et des interactions utilisateurs."
+    },
+    "2": {
+      "title": "Repam",
+      "description": "Application métier multiplateforme utilisant React Native pour le web et le mobile, intégrée aux API REST du client pour gérer les processus internes et les flux de travail."
+    },
+    "3": {
+      "title": "Étoile",
+      "description": "Site institutionnel WordPress avec un fort accent sur l’accessibilité (conformité RGAA) et l’optimisation des performances."
+    },
+    "4": {
+      "title": "Croquette",
+      "description": "Site e-commerce WordPress avec WooCommerce, optimisé pour les utilisateurs mobiles et la conversion."
+    },
+    "5": {
+      "title": "Tusqo",
+      "description": "Boutique en ligne basée sur Shopify, construite avec une interface propre et une architecture maintenable pour un e-commerce évolutif."
+    },
+    "6": {
+      "title": "Le Microcosme",
+      "description": "Application mobile éducative pour enfants développée avec React Native, conçue pour offrir des expériences d’apprentissage interactives sur mobile."
+    }
+  },
+  "about": {
+    "title": "À propos de moi",
+    "getInTouch": "Contactez-moi",
+    "linkedInConnect": "Connectez-vous sur LinkedIn",
+    "description": "Ingénieur logiciel passionné, concentré sur la création de solutions à fort impact",
+    "fullDescription": "Je suis un ingénieur logiciel et développeur full-stack dévoué, avec une expérience dans les applications web et mobiles. Je me spécialise dans la création d’applications multiplateformes avec React Native et j’ai une solide expérience avec Laravel, WordPress et Shopify. Au fil des années, j’ai travaillé sur des projets variés tels que des plateformes e-commerce, des applications éducatives, des sites web d’entreprise et des applications métier. Je m’épanouis autant en freelance qu’en travail d’équipe, en fournissant des solutions évolutives, maintenables et centrées sur l’utilisateur. J’aime transformer les besoins des clients en applications fonctionnelles, accessibles, performantes et esthétiquement plaisantes. Mon ensemble d’outils techniques inclut React, Next.js, TypeScript, Expo, Node.js, MySQL et les API REST. J’apprends constamment de nouvelles technologies et bonnes pratiques pour améliorer mon savoir-faire. Je m’engage à créer des logiciels qui résolvent des problèmes réels tout en offrant une expérience intuitive aux utilisateurs finaux. Au-delà du code, je m’intéresse à l’informatique en cloud, aux pratiques DevOps et à l’architecture logicielle. Je suis fier d’écrire un code propre et bien documenté et de mentoriser les développeurs juniors chaque fois que possible. Je suis passionné par l’accessibilité, l’optimisation des performances et la création de solutions ayant un impact réel sur les entreprises et les utilisateurs."
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "description": "Vous avez une question ou voulez collaborer? Connectons-nous!",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès!",
+    "error": "Échec de l'envoi du message. Veuillez réessayer.",
+    "location": "Emplacement",
+    "phone": "Téléphone",
+    "emailAddress": "Adresse Email",
+    "followMe": "Suivez-moi",
+    "messagePlaceholder": "Dites moi tout à propos de votre projet...",
+    "namePlaceholder": "Entrez votre nom",    
+    "emailPlaceholder": "Entrez votre adresse email"
+  },
+  "footer": {
+    "rights": "Tous les droits réservés",
+    "description": "Ingénieur logiciel passionné construisant des solutions scalables pour l'avenir.",
+    "navigation": "Navigation",
+    "social": "Liens sociaux",
+    "actions": "Actions",
+    "downloadCv": "Télécharger le CV",
+    "contactMe": "Contactez-moi"
+  },
+  "features": {
+    "1": {
+      "title": "Résolveur de problèmes",
+      "description": "Je décompose les problèmes complexes et crée des solutions élégantes en utilisant des technologies modernes."
+    },
+    "2": {
+      "title": "Axé sur la performance",
+      "description": "Chaque ligne de code est optimisée pour la vitesse, l’efficacité et l’expérience utilisateur."
+    },
+    "3": {
+      "title": "Esprit d’équipe",
+      "description": "Je m’épanouis dans les environnements collaboratifs et j’aime encadrer les autres développeurs."
+    },
+    "4": {
+      "title": "Vision globale",
+      "description": "Expérience de travail avec des équipes à distance et des cultures techniques diverses."
+    },
+    "5": {
+      "title": "Passionné",
+      "description": "J’aime ce que je fais et j’améliore continuellement mes compétences."
+    },
+    "6": {
+      "title": "Orienté objectif",
+      "description": "Motivé par l’impact et l’atteinte de résultats mesurables pour l’entreprise."
+    }
+  }
+}

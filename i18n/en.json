@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "name": "Fares Ben Khalifa",
+    "title": "Software Engineer & Cloud Developer",
+    "subtitle": "Building scalable applications with modern technologies",
+    "cta": "Download CV",
+    "experience-years": "Years of Experience",
+    "projects-completed": "Projects Completed",
+    "client-satisfaction": "Client Satisfaction"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "description": "Expertise in modern web and mobile development",
+    "dragInfo": "Drag to explore",
+    "mobile": "Mobile",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "language": "Language",
+    "database": "Database",
+    "orm": "ORM",
+    "cms": "CMS",
+    "ecommerce": "E-commerce",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "tools": "Tools",
+    "platforms": "Platforms"
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "My professional journey",
+    "viewMore": "Want to see more details?",
+    "viewFullCV": "View Full Resume",
+    "key-achievements": "Key Achievements"
+  },
+  "experiences": {
+    "1": {
+      "title": "Software Engineer",
+      "company": "Bysur",
+      "period": "2025 - Present",
+      "location": "Remote",
+      "description": "Developing and maintaining web and mobile applications, contributing to architecture decisions, and delivering scalable, user-focused solutions across multiple projects.",
+      "achievements": [
+        "Developed and maintained web and mobile applications using React, React Native, and WordPress for business and e-commerce use cases",
+        "Contributed to application architecture and feature design, improving performance, accessibility, and maintainability"
+      ]
+    },
+    "2": {
+      "title": "Freelance Software Engineer",
+      "company": "Freelance",
+      "period": "2023 - Present",
+      "location": "Remote",
+      "description": "Worked as a freelance software engineer delivering mobile and web solutions for microcosme projects, focusing on building reliable, maintainable applications aligned with client business needs.",
+      "achievements": [
+        "Developed and maintained mobile applications using React Native, delivering cross-platform solutions for Android and iOS",
+        "Built and integrated backend services with Laravel, including REST APIs, authentication, and business logic",
+        "Collaborated with clients to translate functional requirements into technical solutions and delivered features end to end"
+      ]
+    },
+    "3": {
+      "title": "Junior Web Developer",
+      "company": "Sofrecom Tunisia",
+      "period": "2022 - 2023",
+      "location": "Tunis, Tunisia",
+      "description": "Started my career building responsive websites and learning modern web technologies.",
+      "achievements": [
+        "Learned and applied web development best practices",
+        "Improved website accessibility score from 60 to 95",
+        "Developed custom WordPress themes for clients"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Selected works and case studies",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "featured-work": "Featured Work",
+    "featured": "Featured",
+    "1": {
+      "title": "Assurnoo",
+      "description": "Cross-platform insurance application for web and mobile built with React Native, integrating the client’s REST APIs for seamless policy management and user interactions."
+    },
+    "2": {
+      "title": "Repam",
+      "description": "Cross-platform business application using React Native for web and mobile, integrated with client REST APIs to manage internal processes and workflows."
+    },
+    "3": {
+      "title": "Étoile",
+      "description": "Corporate WordPress website with strong focus on accessibility (RGAA compliance) and performance optimization."
+    },
+    "4": {
+      "title": "Croquette",
+      "description": "E-commerce WordPress website with WooCommerce, optimized for mobile users and conversion."
+    },
+    "5": {
+      "title": "Tusqo",
+      "description": "Shopify-based online store built with clean UI and maintainable architecture for scalable e-commerce."
+    },
+    "6": {
+      "title": "Le Microcosme",
+      "description": "Child education mobile application built with React Native, designed to provide interactive learning experiences on mobile devices."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "getInTouch": "Get In Touch",
+    "linkedInConnect": "Connect on LinkedIn",
+    "description": "Passionate software engineer focused on creating impactful solutions",
+    "fullDescription": "I am a dedicated software engineer and full-stack developer with experience in web and mobile applications. I specialize in building cross-platform apps using React Native, and I have extensive experience with Laravel, WordPress, and Shopify. Over the years, I have worked on diverse projects including e-commerce platforms, educational apps, corporate websites, and business applications. I thrive in both freelance and collaborative team environments, delivering scalable, maintainable, and user-focused solutions. I enjoy translating client requirements into functional applications that are accessible, high-performing, and visually appealing. My technical toolkit includes React, Next.js, TypeScript, Expo, Node.js, MySQL, and REST APIs. I am constantly learning new technologies and best practices to improve my craft. I am committed to creating software that solves real-world problems while providing an intuitive experience for end-users. Beyond coding, I am interested in cloud computing, DevOps practices, and software architecture. I take pride in writing clean, well-documented code and mentoring junior developers whenever possible. I am passionate about accessibility, performance optimization, and creating solutions that have a meaningful impact on businesses and users alike."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have a question or want to collaborate? Let's connect!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "location": "Location",
+    "phone": "Phone",
+    "emailAddress": "Email Address",
+    "followMe": "Follow Me",
+    "messagePlaceholder": "Tell me about your project...",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "description": "Passionate software engineer building scalable solutions for the future.",
+    "navigation": "Navigation",
+    "social": "Social",
+    "actions": "Actions",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "features": {
+  "1": {
+    "title": "Problem Solver",
+    "description": "I break down complex problems and build elegant solutions using modern technologies."
+  },
+  "2": {
+    "title": "Performance Focused",
+    "description": "Every line of code is optimized for speed, efficiency, and user experience."
+  },
+  "3": {
+    "title": "Team Player",
+    "description": "I thrive in collaborative environments and enjoy mentoring fellow developers."
+  },
+  "4": {
+    "title": "Global Mindset",
+    "description": "Experienced working with remote teams and diverse technical cultures."
+  },
+  "5": {
+    "title": "Passionate",
+    "description": "I love what I do and continuously learn and improve my craft."
+  },
+  "6": {
+    "title": "Goal Oriented",
+    "description": "Driven by delivering impact and achieving measurable business outcomes."
+  }
+}
+}
