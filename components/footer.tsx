@@ -38,7 +38,7 @@ export default function Footer() {
     {
       icon: "/LinkedIn_icon.svg.png",
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/fares-ben-khalifa-255422216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
   ];
 
@@ -83,14 +83,20 @@ export default function Footer() {
                 className="object-contain"
               />
             </div>
-            <p className={`text-foreground/60 text-sm leading-relaxed ${locale === "ar" ? "text-right" : ""}`}>
+            <p
+              className={`text-foreground/60 text-sm leading-relaxed ${locale === "ar" ? "text-right" : ""}`}
+            >
               {t("footer.description")}{" "}
             </p>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div className="md:col-span-1" variants={itemVariants}>
-            <h3 className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}>{t("footer.navigation")}</h3>
+            <h3
+              className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}
+            >
+              {t("footer.navigation")}
+            </h3>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <motion.li
@@ -111,8 +117,14 @@ export default function Footer() {
 
           {/* Social Links */}
           <motion.div className="md:col-span-1" variants={itemVariants}>
-            <h3 className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}>{t('footer.social')}</h3>
-            <div className={`space-y-2 ${locale === "ar" ? "text-right flex flex-col items-end" : ""}`}>
+            <h3
+              className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}
+            >
+              {t("footer.social")}
+            </h3>
+            <div
+              className={`space-y-2 ${locale === "ar" ? "text-right flex flex-col items-end" : ""}`}
+            >
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
@@ -142,7 +154,11 @@ export default function Footer() {
 
           {/* CTA */}
           <motion.div className="md:col-span-1" variants={itemVariants}>
-            <h3 className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}>{t("footer.actions")}</h3>
+            <h3
+              className={`font-semibold mb-4 text-foreground ${locale === "ar" ? "text-right" : ""}`}
+            >
+              {t("footer.actions")}
+            </h3>
             <div className="space-y-3">
               <motion.button
                 onClick={downloadCV}
@@ -183,7 +199,9 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <motion.p className="mb-4 sm:mb-0" variants={itemVariants}>
-            {locale === "ar" ? `${t("footer.rights")} © Fares Ben Khalifa. ${new Date().getFullYear()}` : `${new Date().getFullYear()} © Fares Ben Khalifa. ${t("footer.rights")}`}
+            {locale === "ar"
+              ? `${t("footer.rights")} © Fares Ben Khalifa. ${new Date().getFullYear()}`
+              : `${new Date().getFullYear()} © Fares Ben Khalifa. ${t("footer.rights")}`}
             .
           </motion.p>
         </motion.div>

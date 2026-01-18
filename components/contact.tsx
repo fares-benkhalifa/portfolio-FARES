@@ -1,35 +1,37 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useTranslations, useLocale } from "next-intl"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { Mail, MapPin, Phone, Send, Loader } from "lucide-react"
-import { useState } from "react"
+import { useTranslations, useLocale } from "next-intl";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Mail, MapPin, Phone, Send, Loader } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
-  const t = useTranslations()
-  const locale = useLocale()
+  const t = useTranslations();
+  const locale = useLocale();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const [loading, setLoading] = useState(false)
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch("/api/send-email", {
@@ -38,23 +40,23 @@ export default function Contact() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
+      });
 
       if (response.ok) {
-        setStatus("success")
-        setFormData({ name: "", email: "", message: "" })
-        setTimeout(() => setStatus("idle"), 5000)
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
       } else {
-        setStatus("error")
-        setTimeout(() => setStatus("idle"), 5000)
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
       }
     } catch (error) {
-      setStatus("error")
-      setTimeout(() => setStatus("idle"), 5000)
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -65,7 +67,7 @@ export default function Contact() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -74,7 +76,7 @@ export default function Contact() {
       y: 0,
       transition: { duration: 0.6 },
     },
-  }
+  };
 
   const contactInfo = [
     {
@@ -95,9 +97,12 @@ export default function Contact() {
       value: "+216 XX XXX XXX",
       href: "tel:+216",
     },
-  ]
+  ];
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/40 border-y border-border">
+    <section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-card/40 border-y border-border"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -107,7 +112,9 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">{t("contact.title")}</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            {t("contact.title")}
+          </h2>
           <p className="text-muted text-lg">{t("contact.description")}</p>
         </motion.div>
 
@@ -120,9 +127,12 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           {/* Contact Info Cards */}
-          <motion.div className="lg:col-span-1 space-y-6" variants={containerVariants}>
+          <motion.div
+            className="lg:col-span-1 space-y-6"
+            variants={containerVariants}
+          >
             {contactInfo.map((info, index) => {
-              const Icon = info.icon
+              const Icon = info.icon;
               return (
                 <motion.a
                   key={index}
@@ -142,38 +152,65 @@ export default function Contact() {
                   >
                     <Icon className="text-primary" size={24} />
                   </motion.div>
-                  <div className={`flex-grow ${locale === "ar" ? "text-right" : ""}`}>
-                    <h3 className={`${locale === "ar" ? "text-right" : ""} font-semibold mb-1`}>{info.title}</h3>
-                    <p className={`text-foreground/70 text-sm break-all ${locale === "ar" ? "text-right" : ""}`}>{info.value}</p>
+                  <div
+                    className={`flex-grow ${locale === "ar" ? "text-right" : ""}`}
+                  >
+                    <h3
+                      className={`${locale === "ar" ? "text-right" : ""} font-semibold mb-1`}
+                    >
+                      {info.title}
+                    </h3>
+                    <p
+                      className={`text-foreground/70 text-sm break-all ${locale === "ar" ? "text-right" : ""}`}
+                    >
+                      {info.value}
+                    </p>
                   </div>
                 </motion.a>
-              )
+              );
             })}
 
             {/* Social Links */}
             <motion.div className="pt-4" variants={itemVariants}>
-              <h3 className={`font-semibold mb-4 ${locale === "ar" ? "text-right" : ""}`}>{t("contact.followMe")}</h3>
-                <div className={`flex gap-4 ${locale === "ar" ? "justify-end" : ""}`}>
-                  {[
-                    { name: "LinkedIn", url: "https://linkedin.com", icon: "/LinkedIn_icon.svg.png" },
-                  ].map((social) => (
-                    <motion.a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all text-xl"
-                      whileHover={{ scale: 1.15, rotate: 10 }}
-                      title={social.name}
-                    >
-                      {typeof social.icon === "string" && social.icon.startsWith("/") ? (
-                        <Image src={social.icon} alt={social.name} width={20} height={20} className="object-contain" />
-                      ) : (
-                        social.icon
-                      )}
-                    </motion.a>
-                  ))}
-                </div>
+              <h3
+                className={`font-semibold mb-4 ${locale === "ar" ? "text-right" : ""}`}
+              >
+                {t("contact.followMe")}
+              </h3>
+              <div
+                className={`flex gap-4 ${locale === "ar" ? "justify-end" : ""}`}
+              >
+                {[
+                  {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/fares-ben-khalifa-255422216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                    icon: "/LinkedIn_icon.svg.png",
+                  },
+                ].map((social) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all text-xl"
+                    whileHover={{ scale: 1.15, rotate: 10 }}
+                    title={social.name}
+                  >
+                    {typeof social.icon === "string" &&
+                    social.icon.startsWith("/") ? (
+                      <Image
+                        src={social.icon}
+                        alt={social.name}
+                        width={20}
+                        height={20}
+                        className="object-contain"
+                      />
+                    ) : (
+                      social.icon
+                    )}
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -196,7 +233,11 @@ export default function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <label className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}>{t("contact.name")}</label>
+                <label
+                  className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}
+                >
+                  {t("contact.name")}
+                </label>
                 <motion.input
                   type="text"
                   name="name"
@@ -216,7 +257,11 @@ export default function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <label className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}>{t("contact.email")}</label>
+                <label
+                  className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}
+                >
+                  {t("contact.email")}
+                </label>
                 <motion.input
                   type="email"
                   name="email"
@@ -236,7 +281,11 @@ export default function Contact() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <label className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}>{t("contact.message")}</label>
+                <label
+                  className={`block text-sm font-medium mb-2 ${locale === "ar" ? "text-right" : ""}`}
+                >
+                  {t("contact.message")}
+                </label>
                 <motion.textarea
                   name="message"
                   value={formData.message}
@@ -296,5 +345,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

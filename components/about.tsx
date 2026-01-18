@@ -109,7 +109,7 @@ export default function About() {
               </motion.a>
 
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/fares-ben-khalifa-255422216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-colors"

@@ -111,6 +111,7 @@ export default function Hero() {
               </motion.button>
 
               <motion.button
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 className={`flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 ${locale === "ar" ? "flex-row-reverse" : ""}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
