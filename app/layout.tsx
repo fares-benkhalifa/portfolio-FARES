@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Fares Ben Khalifa - Software Engineer & Cloud Developer",
   description: "Professional portfolio showcasing experience in React Native, React, Next.js, Node.js, and cloud development.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo-fbk.png",
   },
 }
 
