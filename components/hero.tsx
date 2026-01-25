@@ -100,24 +100,45 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div className={`flex flex-col sm:flex-row gap-4 pt-4 ${locale === "ar" ? "sm:flex-row-reverse justify-end" : ""}`} variants={itemVariants}>
+              {/* Primary CTA Button */}
               <motion.button
                 onClick={downloadCV}
-                className={`flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-background rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 ${locale === "ar" ? "flex-row-reverse" : ""}`}
+                className={`group relative overflow-hidden px-8 py-4 rounded-xl font-semibold text-background transition-all duration-300 ${locale === "ar" ? "flex flex-row-reverse items-center justify-center gap-2" : "flex items-center justify-center gap-2"}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Download size={20} />
-                {t("hero.cta")}
+                {/* Gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark to-primary bg-size-200 animate-gradient" />
+                
+                {/* Animated border glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg" />
+                
+                {/* Content */}
+                <div className="relative z-10 flex items-center gap-2">
+                  <Download size={20} />
+                  {t("hero.cta")}
+                </div>
+
+                {/* Hover effect shadow */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/40 to-primary-dark/40 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-300 -z-10" />
               </motion.button>
 
+              {/* Secondary Button */}
               <motion.button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className={`flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/10 transition-all duration-300 ${locale === "ar" ? "flex-row-reverse" : ""}`}
+                className={`group relative px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 ${locale === "ar" ? "flex flex-row-reverse items-center justify-center gap-2" : "flex items-center justify-center gap-2"}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t("nav.contact")}
-                <ArrowRight size={20} />
+                {/* Border and background */}
+                <div className="absolute inset-0 rounded-xl border-2 border-primary/50 group-hover:border-primary transition-colors duration-300" />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-300" />
+
+                {/* Content */}
+                <div className="relative z-10 flex items-center gap-2 text-primary group-hover:text-primary transition-colors">
+                  {t("nav.contact")}
+                  <ArrowRight size={20} />
+                </div>
               </motion.button>
             </motion.div>
 

@@ -324,21 +324,33 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="w-full px-6 py-4 bg-gradient-to-r from-primary to-primary-dark text-background rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group relative w-full overflow-hidden px-6 py-4 rounded-xl font-semibold text-background transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                whileHover={{ scale: loading ? 1 : 1.02 }}
+                whileTap={{ scale: loading ? 1 : 0.98 }}
               >
-                {loading ? (
-                  <>
-                    <Loader size={20} className="animate-spin" />
-                    {t("contact.sending")}
-                  </>
-                ) : (
-                  <>
-                    <Send size={20} />
-                    {t("contact.send")}
-                  </>
-                )}
+                {/* Gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-dark to-primary bg-size-200 animate-gradient" />
+                
+                {/* Animated border glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg" />
+                
+                {/* Content */}
+                <div className="relative z-10 flex items-center gap-2">
+                  {loading ? (
+                    <>
+                      <Loader size={20} className="animate-spin" />
+                      {t("contact.sending")}
+                    </>
+                  ) : (
+                    <>
+                      <Send size={20} />
+                      {t("contact.send")}
+                    </>
+                  )}
+                </div>
+
+                {/* Hover effect shadow */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/40 to-primary-dark/40 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-300 -z-10" />
               </motion.button>
             </div>
           </motion.form>
